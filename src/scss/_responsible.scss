@@ -1,0 +1,206 @@
+@media screen and (max-width: 960px) {
+
+    body {
+        align-items: start;
+    }
+    .container {
+        margin-top: 100px;
+        position: static;
+        max-width: calc(100vw - 32px);
+        display: block;
+        min-height: unset;
+        padding-bottom: 100px;
+    }
+
+    .steps {
+        padding: 32px 0 20vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        .step {
+          >:last-child {
+            display: none;
+          }
+        }
+    }
+
+    .content {
+        .buttons {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+            padding: 16px;
+            box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    h1 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    form {
+        &.personal-info {
+            gap: 16px;
+        }
+        label {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    label {
+        &.input-text {
+            gap: 3px
+        }
+        &.invalid {
+            &.error::before,
+            &.empty::before {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+        }   
+    }
+
+    .header {
+        padding-bottom: 22px;
+        width: 100%;
+        h1 {
+            padding-bottom: 9px;
+        }
+    }
+
+    button {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 12px 16px;
+        &.tetriary {
+            padding: 12px 0;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"] {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 17px;
+        height: 40px;
+        padding: 11px 16px 12px;
+        cursor: pointer;
+        &:focus {
+            border: 1px solid #483EFF;
+        }
+        &::placeholder {
+            color: #9699AA;
+        }
+    }
+    .container {
+        padding: 32px 24px;
+    }
+    .content {
+        padding: 0;
+    }
+
+    .plans {
+        flex-direction: column;
+        justify-content: start;
+        gap: 12px;
+        .plan {
+            padding: 14px 16px 18px;
+            display: flex;
+            margin-bottom: unset;
+            gap: 14px;
+            align-items: start;
+    
+            img {
+                margin-bottom: unset;
+            }
+            }
+             p.extra-small {
+                margin-top: 3px;
+            }
+            &.checked {
+                border: 1px solid #483EFF;
+                background-color: #F8F9FF;
+            }
+        }
+    .period {
+        margin-top: 24px;
+    }
+    .addons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    
+        .addon {
+            padding: 11px 16px 12px;
+            gap: 16px;
+            cursor: pointer;
+            h3 {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 3px;
+            }
+            p.small {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+        }
+    }
+
+    .finnish {
+        .top {
+            padding: 16px 16px;
+            h2 {
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 3px;
+            }
+            >:nth-child(2) {
+                margin-top: 12px;
+            }
+            .finnish-addon {
+                padding-top: 12px;
+            }
+    
+        }
+        .total {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 16px 0;
+            .big {
+                color: #483EFF;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    .thanks {
+        padding: 48px 0;
+        h1 {
+            margin: 24px 0 9px;
+        }
+        img {
+            width: 56px;
+            justify-self: center;
+        }
+    }
+
+}
+
+

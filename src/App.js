@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import './scss/styles.scss';
+import Steps from'./components/Steps'
+import PersonalInfoSection from'./sections/PersonalInfoSection'
+import FinnishUpSection from'./sections/FinnishUpSection'
+import PickAddOnnsSection from'./sections/PickAddOnnsSection'
+import SelectPlanSection from'./sections/SelectPlanSection'
+import ThankYouSection from'./sections/ThankYouSection'
+import Route from'./components/Route'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container">
+
+      <Steps />
+      <Route section='personalInfo'>
+        <PersonalInfoSection />
+      </Route>
+      <Route section='SelectPlan'>
+        <SelectPlanSection   />
+      </Route>
+      <Route section='PickAddOnns'>
+        <PickAddOnnsSection   />
+      </Route>
+      <Route section='FinnishUp'>
+        <FinnishUpSection  />
+      </Route>
+      <Route section='ThankYou'>
+        <ThankYouSection  />
+      </Route>
     </div>
   );
 }
